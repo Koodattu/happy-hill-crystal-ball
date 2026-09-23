@@ -2,13 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { answers, drawAnswer, createShakeDetector } from '../answers.mjs';
 
-test('five topics contain 100 unique, concise answers', () => {
+test('five topics contain 200 unique, concise answers', () => {
   assert.equal(Object.keys(answers).length, 5);
   const all = Object.values(answers).flat();
-  assert.equal(all.length, 100);
-  assert.equal(new Set(all).size, 100);
+  assert.equal(all.length, 200);
+  assert.equal(new Set(all).size, 200);
   for (const pool of Object.values(answers)) {
-    assert.equal(pool.length, 20);
+    assert.equal(pool.length, 40);
     assert.ok(pool.every(answer => answer.length > 0 && answer.length < 120));
   }
 });

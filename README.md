@@ -1,6 +1,6 @@
 # Happy Hillin kristallipallo
 
-100 sarcastic Finnish answers. None of them helpful.
+200 sarcastic Finnish answers. None of them helpful.
 
 [Try it](https://kristallipallo.koodattu.dev). Pick a topic, then shake or click the ball.
 
