@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101110">
+  <meta name="description" content="Happy Hillin kristallipallo. Ravista ja kysy johdolta.">
+  <title>Kristallipallo — Happy Hill</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <main>
+    <h1 class="sr-only">Happy Hillin kristallipallo</h1>
+    <fieldset class="topics">
+      <legend class="sr-only">Missä tarvitset apua?</legend>
+      <label><input type="radio" name="topic" value="decisions" checked><span>Päätöksenteko</span></label>
+      <label><input type="radio" name="topic" value="career"><span>Ura</span></label>
+      <label><input type="radio" name="topic" value="money"><span>Raha</span></label>
+      <label><input type="radio" name="topic" value="relationships"><span>Ihmissuhteet</span></label>
+      <label><input type="radio" name="topic" value="life"><span>Elämä</span></label>
+    </fieldset>
+    <section class="oracle" aria-label="Kristallipallo">
+      <div class="ball-stage">
+        <button class="ball" id="ball" type="button" aria-label="Ravista kristallipalloa tai paina saadaksesi vastauksen" aria-describedby="oracle-status">
+          <span class="ball-haze" aria-hidden="true"></span>
+          <img class="apparition" src="Capture.PNG" alt="" width="477" height="523" draggable="false">
+          <span class="ball-symbol" aria-hidden="true">✳</span>
+          <span class="ball-glint" aria-hidden="true"></span>
+        </button>
+        <div class="ball-shadow" aria-hidden="true"></div>
+      </div>
+      <div class="reading" aria-live="polite" aria-atomic="true">
+        <p class="sr-only" id="oracle-status">Ravista tai paina palloa.</p>
+        <p class="answer" id="answer"></p>
+      </div>
+      <button class="motion-toggle" id="motion-toggle" type="button" hidden>Ota ravistus käyttöön</button>
+      <p class="motion-status" id="motion-status" role="status"></p>
+    </section>
+    <noscript>Pallo tarvitsee JavaScriptin.</noscript>
+  </main>
+</body>
+</html>
