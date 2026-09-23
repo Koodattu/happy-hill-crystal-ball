@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101110">
   <meta name="description" content="Happy Hillin kristallipallo. Ravista ja kysy johdolta.">
-  <title>Kristallipallo — Happy Hill</title>
+  <title>Armollisen suuren johtajan neuvo — Happy Hill</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script type="module" src="app.mjs"></script>
 </head>
 <body>
   <main>
-    <h1 class="sr-only">Happy Hillin kristallipallo</h1>
+    <h1 class="page-title">Armollisen suuren johtajan neuvo</h1>
     <fieldset class="topics">
       <legend class="sr-only">Missä tarvitset apua?</legend>
       <label><input type="radio" name="topic" value="decisions" checked><span>Päätöksenteko</span></label>
@@ -23,12 +23,24 @@
     </fieldset>
     <section class="oracle" aria-label="Kristallipallo">
       <div class="ball-stage">
-        <button class="ball" id="ball" type="button" aria-label="Ravista kristallipalloa tai paina saadaksesi vastauksen" aria-describedby="oracle-status">
-          <span class="ball-haze" aria-hidden="true"></span>
-          <img class="apparition" src="Capture.PNG" alt="" width="477" height="523" draggable="false">
-          <span class="ball-symbol" aria-hidden="true">✳</span>
-          <span class="ball-glint" aria-hidden="true"></span>
-        </button>
+        <div class="ball-aura" aria-hidden="true"></div>
+        <div class="ball-motion">
+          <button class="ball" id="ball" type="button" aria-label="Ravista kristallipalloa tai paina saadaksesi vastauksen" aria-describedby="oracle-status">
+            <span class="ball-interior" aria-hidden="true">
+              <span class="ball-haze"></span>
+              <span class="ball-mist"></span>
+              <img class="apparition is-active" data-topic="decisions" src="Capture.PNG" alt="" width="477" height="523" draggable="false">
+              <img class="apparition" data-topic="career" src="capture2.PNG" alt="" width="204" height="258" draggable="false">
+              <img class="apparition" data-topic="money" src="capture3.PNG" alt="" width="261" height="268" draggable="false">
+              <img class="apparition" data-topic="relationships" src="capture4.PNG" alt="" width="264" height="244" draggable="false">
+              <img class="apparition" data-topic="life" src="capture5.PNG" alt="" width="257" height="265" draggable="false">
+              <span class="ball-energy"></span>
+              <span class="ball-dust"></span>
+              <span class="ball-symbol">✳</span>
+              <span class="ball-glint"></span>
+            </span>
+          </button>
+        </div>
         <div class="ball-shadow" aria-hidden="true"></div>
       </div>
       <div class="reading" aria-live="polite" aria-atomic="true">
